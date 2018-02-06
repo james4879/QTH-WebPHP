@@ -1,0 +1,511 @@
+{__NOLAYOUT__}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="overflow: hidden; height: 100%;">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<title>{$seo_title}{if $bcid!=0}-{$site_name}{/if}</title>
+<meta name="keywords" content="{$seo_keywords}" />
+<meta name="description" content="{$seo_description}" />
+<meta name="author" content="纵天科技,www.zomsky.com">
+<meta name="copyright" content="纵天科技,www.zomsky.com" >
+<link rel="stylesheet" href="../Public/css/home.css">
+<link rel="stylesheet" href="../Public/css/swiper.min.css">
+<link rel="stylesheet" href="../Public/css/main.css">
+<link rel="stylesheet" href="../Public/css/animation.css">
+<style type="text/css">
+#intro { padding: 0; margin: 0; height: 0 !important; width: 0; overflow: hidden !important; }
+#intro .logo { float: left; margin: 0 10px 10px 0; }
+h1, h2, h3, h4, p, li { font-family: microsoft yahei; }
+/*@media screen and (min-width:600px) {
+.slide1 { background-image: url(../Public/uploads/image/20150911/1441951809.jpg); }
+.slide2 { background-image: url(../Public/uploads/image/20150911/1441949934.jpg); }
+.slide3 { background-image: url(../Public/uploads/image/20150911/1441956136.jpg); }
+.slide4 { background-image: url(../Public/uploads/image/20150911/1441947138.jpg); }
+}*/
+/*@media screen and (max-width:600px) {
+.slide1 { background-image: url(../Public/uploads/image/20150930/1443615946.jpg); }
+.slide2 { background-image: url(../Public/uploads/image/20150930/1443618672.jpg); }
+.slide3 { background-image: url(../Public/uploads/image/20150930/1443618099.jpg); }
+.slide4 { background-image: url(../Public/uploads/image/20150930/1443619355.jpg); }
+}*/
+/* @media screen and (min-width:600px) {
+.page2 { background-image: url(../Public/uploads/image/20150911/1441949348.jpg); }
+.page3 { background-image: url(../Public/uploads/image/20150911/1441956805.jpg); }
+.page4 { background-image: url(../Public/uploads/image/20150930/1443609696.jpg); }
+.page5 { background-image: url(../Public/uploads/image/20150930/1443614947.jpg); }
+.page6 { background-image: url(../Public/uploads/image/20150930/1443608806.jpg); }
+.page7 { background-image: url(../Public/uploads/image/20150930/1443610575.jpg); }
+.page8 { background-image: url(../Public/uploads/image/20150930/1443608078.jpg); }
+}
+@media screen and (max-width:600px) {
+.page2 { background-image: url(../Public/uploads/image/20150930/1443621700.jpg); }
+.page3 { background-image: url(../Public/uploads/image/20150930/1443621784.jpg); }
+.page4 { background-image: url(../Public/uploads/image/20150930/1443620091.jpg); }
+.page5 { background-image: url(../Public/uploads/image/20150930/1443623011.jpg); }
+.page6 { background-image: url(../Public/uploads/image/20150930/1443620778.jpg); }
+.page7 { background-image: url(../Public/uploads/image/20150930/1443619787.jpg); }
+.page8 { background-image: url(../Public/uploads/image/20150930/1443617380.jpg); }
+}*/
+ @media screen and (min-width:1050px) {
+#index_x { display: none }
+}
+
+</style>
+<script src="../Public/js/jquery-1.11.1.min.js"></script><script>
+$(document).ready(function(){
+  $("#index_x").click(function(){
+    $("#menu").hide();
+  });
+  $("#index_xs").click(function(){
+    $("#menu").show();
+  });
+});
+</script>
+</head>
+
+<body class="fp-viewing-page1">
+<header id="header" class="">
+  <div class="container clearfix">
+    <h1 id="logo"> <a href="{:URL()}">{if $logoimg}<img alt="{$site_name}" src="{$logoimg}">{else}<img alt="{$site_name}" src="../Public/uploads/image/20150929/1443537020.png">{/if}</a></h1>
+    <nav> <a class="icon_menu" id="index_xs"><img src="../Public/img/caidan.png"></a>
+      <ul id="menu">
+        <li data-menuanchor="page1" class="active"><a data-name="home" href="#page1" class="cur"><span>首页</span></a></li>
+        <li data-menuanchor="page2" class=""><a href="#page2"><span>{$Categorys[$T['m_product_catid']][catname]}</span></a></li>
+        <li data-menuanchor="page3"><a href="#page3"><span>{$Categorys[$T['m_news_catid']][catname]}</span></a></li>
+        <li data-menuanchor="page4"><a href="#page4"><span>{$Categorys[$T['m_partner_catid']][catname]}</span></a></li>
+        <li data-menuanchor="page5"><a href="#page5"><span>{$Categorys[$T['m_guan_catid']][catname]}</span></a></li>
+        <li data-menuanchor="page6"><a href="#page6"><span>{$Categorys[$T['m_service_catid']][catname]}</span></a></li>
+        <li data-menuanchor="page7"><a href="#page7"><span>{$Categorys[$T['m_culture_catid']][catname]}</span></a></li>
+        <li data-menuanchor="page8"><a href="#page8"><span>{$Categorys[$T['m_contact_catid']][catname]}</span></a></li>
+        <!--<li data-menuanchor="page9"><a href="news.html"><span>资讯</span></a></li>-->
+        <li style=" width:100%;float:right" id="index_x"><img src="../Public/img/close.png"></li>
+      </ul>
+    </nav>
+    <!--<div class="nav-tel" style="font-size:16px"><a href="javascript:;">登陆</a> | <a href="javascript:;">注册</a></div>-->
+  </div>
+</header>
+<div class="page-container ronbongpage-wrapper">
+	<section class="section page1 fp-section fp-table active" data-anchor="page1">
+    <div class="rbslider-container rbslider-container-horizontal">
+      <div class="home-news"> <span>NEWS:</span>
+        <ul>
+          <YP:list order="listorder desc,id desc" catid="T[m_news_catid]" limit="5" field="*" key="k" posid="2">
+            <li><a href="{$r.url}">{$r.title|str_cut=###,30}</a></li>
+          </YP:list>
+        </ul>
+        <a onclick="location='{$Categorys[$T['m_news_catid']][url]}'" href="{$Categorys[$T['m_news_catid']][url]}" class="more">more</a> </div>
+      <YP:flash flashid="1" />
+    </div>
+  </section>
+  	<section class="section page2 fp-section fp-table" data-anchor="page2" {if $indbgtwo}style="background-image: url({$indbgtwo});"{else}style="background-image: url(../Public/uploads/image/20150911/1441949348.jpg);"{/if}>
+    <div class="section-content-container">
+        <hgroup>
+            <h2 style="color:#646464;">{$indtwoent}</h2>
+            <h3>{$indtwocnt}</h3>
+        </hgroup>
+        <div class="section-content">
+            <div class="swiper-container page2-container">
+                <div class="swiper-wrapper">
+                    <YP:subcat catid="$T['m_product_catid']" key="k">
+                    {if $k<5}
+                    <div class="swiper-slide">
+                        <a href="{$r.url}">
+                            <div class="box">
+                                <div class="top" style="background-image:url({$r.image});">
+                                    <h3>{$r.catname}</h3>
+                                    <p>{$r.catdir}</p>
+                                    <b>&nbsp;</b>
+                                </div>
+                                <!--<div class="intro">
+                                    <p>{$r.description}</p>
+                                </div>-->
+                            </div>
+                        </a>
+                    </div>
+                    {/if}
+                    </YP:subcat>
+                </div>
+            </div>
+            <div class="page2-button-next"></div>
+            <div class="page2-button-prev"></div>
+        </div>
+      <!-- <ul class="section-content service-list">
+        <YP:subcat catid="$T['m_product_catid']" key="k">
+        {if $k<5}
+        <li>
+          <a href="{$r.url}">
+          <div class="top" style="background-image:url({$r.image});">
+            <h3>{$r.catname}</h3>
+            <p>{$r.catdir}</p>
+          </div>
+          <div class="intro">
+            <p>{$r.description}</p>
+          </div>
+          </a>
+        </li>
+        {/if}
+        </YP:subcat>
+      </ul> -->
+    </div>
+    <!--<div class="rbslider-item-list-wrapper">
+    <a class="wider-more" href="/index.php/Product/list/1.html" style="top: 556px;">MORE</a>
+    </div>-->
+    <div onclick="location='/index.php/Product/list/1.html'" class="rbslider-item-list-more" style="margin-top: 100px;">MORE</div>
+  </section>
+  	<section class="section page3 fp-section fp-table" data-anchor="page3" {if $indbgthree}style="background-image: url({$indbgthree});background-position: center bottom;"{else}style="background-image: url(../Public/uploads/image/20150911/1441956805.jpg);background-position: center bottom;"{/if}>
+    <div class="section-content-container rbslider-item-list-container">
+      <hgroup>
+        <h2>{$indthreeent}</h2>
+        <h3>{$indthreecnt}</h3>
+      </hgroup>
+      <div class="section-content rbslider-item-list-wrapper case-list">
+        <ul class="rbslider-item-list clearfix">
+          <YP:list order="listorder desc,id desc" catid="2,8" limit="3" name="Article" field="*" key="k" posid="2">
+            <li><a href="{$r.url}">
+              <div class="img-box">
+                <div class="img"><img src="{$r.thumb}" alt="{$r.title}"></div>
+                <div class="ck"></div>
+                <div class="cover"></div>
+              </div>
+              <div class="intro">
+                <div class="intro-content">
+                  <h3>{$r.title|str_cut=###,25}</h3>
+                  <p>{$r.description|str_cut=###,25}</p>
+                </div>
+                <div class="cover"></div>
+              </div>
+              </a> </li>
+          </YP:list>
+          <a class="wider-more" href="{$Categorys[$T['m_news_catid']][url]}">MORE</a>
+        </ul>
+        <div class="rbslider-pagination" style="display:none;"></div>
+      </div>
+      <div class="navigation case"> <a class="prev"></a> <a class="next"></a> </div>
+      <div onclick="location='{$Categorys[$T['m_news_catid']][url]}'" class="rbslider-item-list-more">MORE</div> 
+    </div>
+  </section>
+	<section class="section page4 fp-section fp-table" data-anchor="page4" {if $indbgfour}style="background-image: url({$indbgfour});background-position: center bottom;"{else}style="background-image: url(../Public/uploads/image/20150930/1443609696.jpg);background-position: center bottom;"{/if}>
+    <div class="section-content-container">
+        <hgroup>
+            <h2 style="color:#646464;">{$indfourent}</h2>
+            <h3>{$indfourcnt}</h3>
+        </hgroup>
+        <div class="section-content">
+            <div class="swiper-container page4-container">
+                <div class="swiper-wrapper" style=" margin:0 auto;">
+                    <YP:list order="listorder desc,id desc" catid="T[m_partner_catid]" limit="10" field="*" key="k">
+                    <div class="swiper-slide">
+                        <div class="con">
+                            <div class="img"><img alt="{$r.title}" src="{$r.thumb}"></div>
+                            <h4><a href="{$r.weburl}" target="_blank">{$r.title}</a></h4>
+                            <p><a href="{$r.weburl}" target="_blank">{$r.contentinfo}</a></p>
+                        </div>
+                        <div class="ck"></div>
+                    </div>
+                    </YP:list>
+                </div>
+            </div>
+            <div class="page4-button-next"></div>
+            <div class="page4-button-prev"></div>
+            <!-- <ul class="partner-list clearfix">
+              <YP:list order="listorder desc,id desc" catid="T[m_partner_catid]" limit="10" field="*" key="k">
+                <li>
+                  <div class="con">
+                    <div class="img"><img alt="{$r.title}" src="{$r.thumb}"></div>
+                    <h4><a href="{$r.weburl}" target="_blank">{$r.title}</a></h4>
+                    <p><a href="{$r.weburl}" target="_blank">{$r.contentinfo}</a></p>
+                  </div>
+                  <div class="ck"></div>
+                </li>
+              </YP:list>
+            </ul> -->
+        </div>
+    </div>
+</section>
+	<section class="section page5 white fp-section fp-table" data-anchor="page5" {if $indbgfive}style="background-image: url({$indbgfive});"{else}style="background-image: url(../Public/uploads/image/20150930/1443614947.jpg);"{/if}>
+    <div class="section-content-container rbslider-item-list-container">
+      <hgroup>
+        <h2>{$indfiiveent}</h2>
+        <h3 style="color:#909090;">{$indfiivecnt}</h3>
+      </hgroup>
+      <div class="section-content rbslider-item-list-wrapper case-list">
+        <ul class="rbslider-item-list clearfix">
+          <YP:list order="listorder desc,id desc" catid="24" limit="3" field="*" key="k" posid="2">
+            <li><a href="{$r.url}">
+              <div class="img-box">
+                <div class="img"><img src="{$r.thumb}" alt="{$r.title}"></div>
+                <div class="ck"></div>
+                <div class="cover"></div>
+              </div>
+              <div class="intro" style="background:#fff;">
+                <div class="intro-content">
+                  <h3>{$r.title|str_cut=###,25}</h3>
+                  <p>{$r.description|str_cut=###,25}</p>
+                </div>
+                <div class="cover"></div>
+              </div>
+              </a> </li>
+          </YP:list>
+          <a class="wider-more" href="{$Categorys[9][url]}">MORE</a>
+        </ul>
+        <div class="rbslider-pagination"></div>
+      </div>
+      <div onclick="location='{$Categorys[24][url]}'" class="rbslider-item-list-more">MORE</div> 
+      <div class="navigation equipment"> <a class="prev"></a> <a class="next"></a> </div>
+    </div>
+  </section>
+	<section class="section page6 fp-section fp-table" data-anchor="page6" {if $indbgsix}style="background-image: url({$indbgsix});"{else}style="background-image: url(../Public/uploads/image/20150930/1443608806.jpg);"{/if}>
+    <div class="section-content-container marketing-content">
+      <hgroup>
+        <h2 style="color:#646464;">{$indsixent}</h2>
+        <h3 style="color:#909090;">{$indsixcnt}</h3>
+      </hgroup>
+      <div class="section-content">
+        <ul class="marketing_list clearfix">
+          <YP:subcat catid="$T['m_service_catid']">
+          <li>
+            <a href="{$r.url}">
+            <div class="icon">
+              <div class="circular l"></div>
+              <div class="circular r"></div>
+              <span><img style="margin-top:30px" alt="{$r.catname}" src="{$r.image}"></span> </div>
+            <h4 style="color:#646464">{$r.catname}</h4>
+            <p class="text" style="color:#646464">{$r.description}</p>
+            </a>
+          </li>
+          </YP:subcat>
+          <!--<li>
+            <a href="{$Categorys[$T['m_service_catid']][url]}">
+            <div class="icon">
+              <div class="circular l"></div>
+              <div class="circular r"></div>
+              <span><img style="margin-top:30px" alt="微信营销" src="../Public/uploads/image/20151001/1443702541.png"></span> </div>
+            <h4>微信营销</h4>
+            <p class="text">公众账号 / 微网站<br>微商城</p>
+            </a>
+          </li>
+          <li>
+            <a href="{$Categorys[$T['m_service_catid']][url]}">
+            <div class="icon">
+              <div class="circular l"></div>
+              <div class="circular r"></div>
+              <span><img style="margin-top:30px" alt="微博营销" src="../Public/uploads/image/20151001/1443707613.png"></span> </div>
+            <h4>微博营销</h4>
+            <p class="text">企业蓝V认证<br>微博接入网站</p>
+            </a>
+          </li>
+          <li>
+          	<a href="{$Categorys[$T['m_service_catid']][url]}">
+            <div class="icon">
+              <div class="circular l"></div>
+              <div class="circular r"></div>
+              <span><img style="margin-top:30px" alt="信息推送" src="../Public/uploads/image/20151001/1443700279.png"></span> </div>
+            <h4>信息推送</h4>
+            <p class="text">短信平台接口<br>Email 推送</p>
+            </a>
+          </li>
+          <li>
+            <a href="{$Categorys[$T['m_service_catid']][url]}">
+            <div class="icon">
+              <div class="circular l"></div>
+              <div class="circular r"></div>
+              <span><img style="margin-top:30px" alt="在线支付" src="../Public/uploads/image/20151001/1443704543.png"></span> </div>
+            <h4>在线支付</h4>
+            <p class="text">支付宝、银联<br>Paypal 接口</p>
+            </a>
+          </li>
+          <li>
+            <a href="{$Categorys[$T['m_service_catid']][url]}">
+            <div class="icon">
+              <div class="circular l"></div>
+              <div class="circular r"></div>
+              <span><img style="margin-top:30px" alt="论坛聚人" src="../Public/uploads/image/20151001/1443708028.png"></span> </div>
+            <h4>论坛聚人</h4>
+            <p class="text">独立开发<br>会员打通</p>
+            </a>
+          </li>-->
+        </ul>
+      </div>
+    </div>
+  </section>
+	<section class="section page7 fp-section fp-table" data-anchor="page7" {if $indbgseven}style="background-image: url({$indbgseven});"{else}style="background-image: url(../Public/uploads/image/20150930/1443610575.jpg);"{/if}>
+    <ul class="home-about">
+      <YP:subcat catid="$T['m_culture_catid']" key="k">
+      <li {if $k==1}class="cur xxoo"{/if}>
+        <?php
+            $Dao = M("Page");
+            $where = " id=".$r['id'];
+            $sselect = $Dao->where($where)->field("id,content")->find();
+            echo $sselect['content'];
+        ?>
+      </li>
+      </YP:subcat>
+      <!--<li class="cur">
+          <h2>创客云简介</h2>
+          <div class="con">
+            <p>我们秉承“诚信、优质、服务、创新”的企业精神<br>
+              我们推崇企业文化“存正心、树正义、走正道、做正事”的企业文化<br>
+              我们坚持“仰望星空，脚踏实地”的创业理念。</p>
+          </div>
+          <h3 class="bot">创客云，就是帮客户创造利益。</h3>
+        </li>
+        <li class="">
+          <h2>放下荣誉，放眼未来</h2>
+          <div class="con">
+            <p>2013年-荣获滨江区高新技术企业</p>
+          </div>
+          <h3 class="bot">2012年-设计联盟评选为金牌设计企业</h3>
+        </li>-->
+    </ul>
+    <ul class="home-about-navi">
+      <YP:subcat catid="$T['m_culture_catid']">
+      <li>{$r.catname}</li>
+      </YP:subcat>
+      <!--<li>关于</li>
+        <li>荣誉</li>-->
+      <li class="bg" style="top: 32px; left: 0px;"></li>
+    </ul>
+    <div class="home-about-bottom">
+      <ul class="clearfix">
+        <li>{$indaboutinfoone}</li>
+        <li>{$indaboutinfotwo}</li>
+        <li>{$indaboutinfothree}</li>
+      </ul>
+    </div>
+  </section>
+  	<section class="section page8 fp-section fp-table" data-anchor="page8" {if $indbgeight}style="background-image: url({$indbgeight});background-size:cover;"{else}style="background-image: url(../Public/uploads/image/20150930/1443608078.jpg);"{/if}>
+    <div class="home-contact">
+      <ul class="clearfix">
+        <li class="img">{if $erweimaimg}<img src="{$erweimaimg}" align="微信">{else}<img src="../Public/uploads/image/20150911/1441956938.png" align="微信">{/if}</li>
+        <li class="center">
+          <YP:block pos="contact" />
+        </li>
+        <li class="line"></li>
+      </ul>
+      <div class="clear"></div>
+      <div class="kh">
+        <YP:block pos="about" />
+        <!--<p style="font-size:13px; line-height:36px;"><a href="http://www.zomsky.com/" target="_blank" style="font-size:13px; line-height:36px;">网站建设：纵天科技</a></p>-->
+      </div>
+    </div>
+  </section>
+</div>
+<div id="panel">
+  <ul class="icons">
+    <li class="up" title="上一页"></li>
+    <!--<li class="qq"></li>-->
+    <li class="tel"></li>
+    <li class="wx"></li>
+    <li class="down" title="下一页"></li>
+  </ul>
+  <ul class="info">
+    <li class="qq">
+      <p>在线沟通，请点我<a href="http://wpa.qq.com/msgrd?v=3&amp;uin={$qqhao}&amp;site=qq&amp;menu=yes" target="_blank">在线咨询</a></p>
+    </li>
+    <li class="tel">
+      <p>咨询热线：<br>
+        {$freehotline}<br>
+        <!--客服qq：<br>
+        {$qqhao}--></p>
+    </li>
+    <li class="wx">
+      <div class="img">{if $erweimaimg}<img src="{$erweimaimg}">{else}<img src="../Public/uploads/image/20150911/1441951067.png">{/if}</div>
+    </li>
+  </ul>
+</div>
+<div class="index_cy" id="index_cy"></div>
+<script type="text/javascript" src="../Public/js/jquery-1.9.1.js"></script> 
+<script type="text/javascript"> 
+	$("header nav .icon_menu").click(function(){
+		$(this).siblings("ul").toggleClass("show");
+	});
+	$("#panel .icons li").not(".up,.down").mouseenter(function(){
+		$("#panel .info").addClass('hover');
+		$("#panel .info li").hide();
+		$("#panel .info li."+$(this).attr('class')).show();
+	});
+	$("#panel").mouseleave(function(){
+		$("#panel .info").removeClass('hover');
+	})
+	$(".icons .up").click(function(){
+		$.fn.ronbongpage.moveSectionUp(); 
+	});
+	$(".icons .down").click(function(){
+		$.fn.ronbongpage.moveSectionDown(); 
+	});
+	 /*$(".index_cy").click(function(){
+	    $("#panel").toggle();
+		$(".index_cy").addClass('index_cy2');
+		//$(".index_cy2").removeClass('index_cy');
+	});*/
+	
+	$(function(){ 
+		$(".index_cy").click(function(){ 
+			var UL = $("#panel"); 
+			if(UL.css("display")=="none"){ 
+				UL.css("display","block"); 
+				$(".index_cy").removeClass('index_cy2');
+			} 
+			else{ 
+				UL.css("display","none");
+				$(".index_cy").addClass('index_cy2'); 
+			} 
+		}); 
+	}); 
+
+	
+</script> 
+<script type="text/javascript" src="../Public/js/home.js"></script>
+<script type="text/javascript" src="../Public/js/swiper.min.js"></script>
+<script>
+var swiper = new Swiper('.page2-container', {
+    nextButton: '.page2-button-next',
+    prevButton: '.page2-button-prev',
+    slidesPerView: 4,
+    spaceBetween: 20,
+    loop: true,
+	autoplay:3000,
+    breakpoints:{
+        1366:{
+            slidesPerView: 3
+        },
+        1024:{
+            slidesPerView: 2
+        },
+        768:{
+            slidesPerView: 1
+        }
+    }
+});
+var swiper = new Swiper('.page4-container', {
+    nextButton: '.page4-button-next',
+    prevButton: '.page4-button-prev',
+    slidesPerView: 5,
+    slidesPerColumn: 2,
+	autoplay:3000,
+    breakpoints:{
+        1024:{
+            slidesPerView: 3,
+        },
+        768:{
+            slidesPerView: 2,
+        }
+    }
+});
+</script>
+<!--<div id="fp-nav" class="right">
+  <ul>
+    <li><a href="#page1" class="active"><span></span></a></li>
+    <li><a href="#page2"><span></span></a></li>
+    <li><a href="#page3"><span></span></a></li>
+    <li><a href="#page4"><span></span></a></li>
+    <li><a href="#page5"><span></span></a></li>
+    <li><a href="#page6"><span></span></a></li>
+    <li><a href="#page7"><span></span></a></li>
+    <li><a href="#page8"><span></span></a></li>
+  </ul>
+</div>-->
+</body>
+</html>

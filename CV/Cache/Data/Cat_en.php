@@ -1,0 +1,2 @@
+<?php
+return array ( 'news' => '1', 'hangye' => '2', 'gongsi' => '3', 'Product' => '4', 'cp1' => '5', 'cp2' => '6', 'cp3' => '7', 'zixun' => '10', 'cp5' => '13', 'cp4' => '9', 'info' => '11', 'contactus' => '12', 'pics' => '14', 'down' => '17', 'cnnews' => '16', 'Feedback' => '27', 'Guestbook' => '19', 'about' => '8', 'Industry News' => '23', 'Company News ' => '22', 'News' => '21', 'Products' => '24', 'Category 1 ' => '25', 'Category 2' => '26', 'Contact' => '28', 'About' => '29', 'Company Profile' => '30', 'History' => '31', ); ?>

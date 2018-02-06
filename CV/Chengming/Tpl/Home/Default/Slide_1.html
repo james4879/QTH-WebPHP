@@ -1,0 +1,51 @@
+<div class="rbslider-wrapper">
+  {loop}
+  {if $i==1}
+  <div class="rbslider-slide slide{$i}" {if $r['pic']}style="background-image: url({$r['pic']});"{else}style="background-image: url(../Public/uploads/image/20150911/1441951809.jpg);"{/if}>
+    <div class="slide-content slide-content-{$i}">
+      <h2><a href="{$r.link}">{$r['title']}</a></h2>
+      <h3><b>{$r['twotitle']}</b></h3>
+      <p class="intro">{$r['description']}</p>
+      {if $r['small']}<p class="img"><img alt="{$r['title']}" src="{$r['small']}"></p>{/if}
+    </div>
+  </div>
+  {elseif $i==2}
+  <div class="rbslider-slide slide{$i}" {if $r['pic']}style="background-image: url({$r['pic']});"{else}style="background-image: url(../Public/uploads/image/20150911/1441949934.jpg);"{/if}>
+    <div class="slide-content slide-content-{$i}">
+      <h2>{$r['title']}</h2>
+      <h3><a href="{$r.link}">{$r['twotitle']}</a></h3>
+      <p class="intro">{$r['description']}</p>
+    </div>
+  </div>
+  {elseif $i==3}
+  <div class="rbslider-slide slide{$i}" {if $r['pic']}style="background-image: url({$r['pic']});"{else}style="background-image: url(../Public/uploads/image/20150911/1441956136.jpg);"{/if}>
+    <div class="slide-content slide-content-{$i}">
+      <div class="content-box">
+        <h2><a href="{$r.link}">{$r['title']}</a></h2>
+        <h3><b>{$r['twotitle']}</b></h3>
+        <p class="intro">{$r['description']}</p>
+      </div>
+    </div>
+    <div class="background-box"></div>
+  </div>
+  {elseif $i==4}
+  <div class="rbslider-slide slide{$i}" {if $r['pic']}style="background-image: url({$r['pic']});"{else}style="background-image: url(../Public/uploads/image/20150911/1441947138.jpg);"{/if}>
+    <div class="slide-content slide-content-{$i}">
+      <h2>{$r['title']}</h2>
+      <h3><a href="{$r.link}">{$r['twotitle']}</a></h3>
+      <p class="intro">{$r['description']}</p>
+    </div>
+  </div>
+  {else}
+  <div class="rbslider-slide slide{$i}" {if $r['pic']}style="background-image: url({$r['pic']});"{else}style="background-image: url(../Public/uploads/image/20150911/1441947138.jpg);"{/if}>
+    <div class="slide-content slide-content-{$i}">
+      <h2>{$r['title']}</h2>
+      <h3><a href="{$r.link}">{$r['twotitle']}</a></h3>
+      <p class="intro">{$r['description']}</p>
+    </div>
+  </div>
+  {/if}
+  {/loop}
+</div>
+<a class="move-down"></a>
+<div class="rbslider-pagination rbslider-pagination-clickable">{loop}<span class="rbslider-pagination-bullet {if $i==1}rbslider-pagination-bullet-active{/if}"></span>{/loop}</div>
